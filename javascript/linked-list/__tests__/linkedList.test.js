@@ -21,7 +21,7 @@ describe("link list", () => {
         list.append(10);
         expect(list.head.value).toEqual('one');
     })
-})
+});
 
 ////test  insert 
 describe('insert to the beginning of linklst ', () => {
@@ -31,5 +31,8 @@ describe('insert to the beginning of linklst ', () => {
     ll.insert('a');
     expect(ll.head.value).toBe('a');
     expect(ll.head.next).toBeNull();
-  });
- 
+  })
+});
+
+
+
