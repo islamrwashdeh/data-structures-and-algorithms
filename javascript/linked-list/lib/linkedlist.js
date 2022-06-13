@@ -27,36 +27,84 @@ class LinkedList {
             return this;
         }
     }
-          //insert 
-          insert(value){
-            const newNode = new Node(value);
-              if(!this.head){
-                this.head = newNode;
-              } else{
-                  newNode.next = this.head;
-                  this.head = Node;
-              }
 
-          }
+                    //Code Challenge: Class 06//
 
 
-          // include  
+     
+    insertBefore(previousValue, insertedValue) {
+        const node = new Node(insertedValue);
+        let current = this.head;
+        while (current.next != null) {
+            current = current.next;
+            if (current.next.value == previousValue) {
+                this.length++;
+                node.next = current.next;
+                current.next = node;
+                return null;
+            }
+        }
 
-          include(value){
-              if(this.head!=null){
-                  let includehead = this.head;
-                  while(includehead!=null){
+    }
+    insertAfter(previousValue, insertedValue) {
+        const node = new Node(insertedValue);
+        let current = this.head;
+        while (current.next != null) {
+            current = current.next;
+            if (current.value == previousValue) {
+                this.length++;
+                node.next = current.next;
+                current.next = node;
+                return null;
+            }
+        }
+
+
+    }
+
+
+
+
+
+// ************************************************//
+
+ 
+        //   //insert 
+        //   insert(value){
+        //     const newNode = new Node(value);
+        //       if(!this.head){
+        //         this.head = newNode;
+        //       } else{
+        //           newNode.next = this.head;
+        //           this.head = Node;
+        //       }
+
+        //   }
+
+
+        //   // include  
+
+        //   include(value){
+        //       if(this.head!=null){
+        //           let includehead = this.head;
+        //           while(includehead!=null){
                 
-                if(includehead.value!=value){
+        //         if(includehead.value!=value){
 
-                includehead =includehead.next;
-            }
-            else return true;
-            }
+        //         includehead =includehead.next;
+        //     }
+        //     else return true;
+        //     }
        
-          }
-          else return false;
-          }
+        //   }
+        //   else return false;
+        //   }
+
+//*********************************************************** */
+         
+          
+
+
 
 }
 
