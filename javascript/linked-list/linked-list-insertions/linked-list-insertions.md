@@ -12,7 +12,7 @@ adds a new node with the given new value immediately after the first node that h
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![pic](/linked-list/linked-list-insertions/before.png)
+![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/linked-list-insertions/javascript/linked-list/linked-list-insertions/before.png?raw=true)
 
 ![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/linked-list-insertions/javascript/linked-list/linked-list-insertions/After.png?raw=true)
 
