@@ -14,7 +14,7 @@ adds a new node with the given new value immediately after the first node that h
 <!-- Embedded whiteboard image -->
 ![pic](/linked-list/linked-list-insertions/before.png)
 
-![pic](/linked-list/linked-list-insertions/After.png)
+![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/linked-list-insertions/javascript/linked-list/linked-list-insertions/After.png?raw=true)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
