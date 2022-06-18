@@ -10,7 +10,7 @@ You have access to the Node class and all the properties on the Linked List clas
 
 ## Whiteboard Process
 
-![pic](./Screenshot%20(134).png)
+![pic](/linked-list/assest/Screenshot%20(134).png)
 ## Approach & Efficiency
 i used while loop and  if statment     
 BIG O  = >    O(n)

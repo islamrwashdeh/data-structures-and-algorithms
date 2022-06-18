@@ -102,20 +102,35 @@ kthFromEnd(k) {
     return current.value;
   }
 }
-          
+       //////////ziped list /////////////
+       
 
-
-         
-          
-
-
-  
-
-
-  
-
-  
+ zipLists(ll1, ll2) {
+    let curr1 = ll1.head;
+    let curr2 = ll2.head;
+    let point = curr1;
+    let x = 0;
+    while (curr1.next !== null && curr2.next !== null) {
+      if (x % 2 === 0) {
+        point.next = curr2;
+        curr2 = curr2.next;
+      } else {
+        point.next = curr1;
+        curr1 = curr1.next;
+      }
+      point = point.next;
+      x++;
+      if (!curr1) {
+        point.next = curr1;
+      }
+      if (!curr2) {
+        point.next = curr2;
+      }
+      return ll1;
+    }
+  }
 }
+
 module.exports = LinkedList;
 
 

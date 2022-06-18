@@ -12,9 +12,9 @@ adds a new node with the given new value immediately after the first node that h
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![pic](/linked-list/linked-list-insertions/before.png)
+![pic](/linked-list/assest/before.png)
 
-![pic](/linked-list/linked-list-insertions/After.png)
+![pic](/linked-list/assest/After.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
