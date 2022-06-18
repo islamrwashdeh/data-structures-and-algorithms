@@ -56,17 +56,30 @@ describe('Linked List', () => {
 
 ////////// kthFromEnd//////////
 
-describe('test kthFromEnd', () => {
-  it('test kthFromEnd cases', () => {
-    const ll = new LinkedList();
-    ll.insert(0);
-    ll.insert(2);
-    ll.insert(6);
-    expect(ll.kthFromEnd(6)).toEqual('Exception');
-    expect(ll.kthFromEnd(2)).toEqual(3);
-    expect(ll.kthFromEnd(0)).toEqual(2);
+// describe('test kthFromEnd', () => {
+//   it('test kthFromEnd cases', () => {
+//     const ll = new LinkedList();
+//     ll.insert(0);
+//     ll.insert(2);
+//     ll.insert(6);
+//     expect(ll.kthFromEnd(6)).toEqual('Exception');
+//     expect(ll.kthFromEnd(2)).toEqual(3);
+//     expect(ll.kthFromEnd(0)).toEqual(2);
    
-  });
-});
+//   });
+// });
 
 
+describe('test zipLists', () => {
+  it('test ziplists cases', () => {
+    const ll1 = new LinkedList('');
+    const ll2 = new LinkedList('');
+    ll1.insert(5);
+    ll1.insert(6);
+    ll1.insert(3);
+
+    ll2.insert(1);
+    ll2.insert(2);
+    ll2.insert(3);
+    console.log('zip lists  : ' + ll1.zipLists(ll1, ll2)); });
+    });
