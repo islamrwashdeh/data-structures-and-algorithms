@@ -24,3 +24,5 @@ Big O : O(1)
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
  i uesed npm test 
+
+ ![pic](/stackandqueue/stack-queue-animal-shelter/Screenshot%20(140)%20(1).png)
