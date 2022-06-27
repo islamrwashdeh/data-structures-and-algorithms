@@ -25,4 +25,4 @@ Big O : O(1)
 <!-- Show how to run your code, and examples of it in action -->
  i uesed npm test 
 
- ![pic](/stackandqueue/stack-queue-animal-shelter/Screenshot%20(140)%20(1).png)
+ ![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/stack-queue-animal-shelter/javascript/stackandqueue/stack-queue-animal-shelter/Screenshot%20(140)%20(1).png?raw=true)
