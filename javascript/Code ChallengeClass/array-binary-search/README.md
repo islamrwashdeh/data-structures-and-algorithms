@@ -5,3 +5,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/main/javascript/Code%20ChallengeClass/array-binary-search/Screenshot%20(140).png?raw=true)
 
 
+

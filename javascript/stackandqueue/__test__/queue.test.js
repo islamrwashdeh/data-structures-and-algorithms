@@ -1,6 +1,6 @@
 "use strict";
 
-const Queue = require("../queue/lib/Queue");
+const Queue = require('../Queue');
 
 describe("testing the Queue", () => {
   it("testing if the Queue is created", () => {

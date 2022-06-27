@@ -1,6 +1,6 @@
 "use strict";
 
-const Stack = require("../stack/lib/Stack");
+const Stack = require('../Stack');
 
 describe("testing the Stack", () => {
   it("Can successfully instantiate an empty stack", () => {
