@@ -1,22 +1,30 @@
 'use strict';
 
-const stackQueue = require('../stack-queue-pseudo/stack-queue-pseudo');
-const test = new stackQueue();
 
-describe('PseudoQueue Test', () => {
-    it('Check if empty', () => {
-        expect(test.length).toEqual(0);
-        expect(test.rear.isEmpty()).toBeTruthy();
-    });
-    it('enqueue to PseudoQueue', () => {
-        let x = "A";
-        test.enqueue(x);
-        expect(test.rear.peek()).toBe(x);
-    });
-    it('dequeue from PseudoQueue', () => {
-        let x2 = "B";
-        test.enqueue(x2);
-        expect(test.dequeue()).toEqual('A');
-    });
+const Pqueue = require('../stack-queue-pseudo/stack-queue-pseudo');
 
+describe('enqueue pseudoQueue', () => {
+
+  it('add to queue', () => {
+    const pseudoqueue = new Pqueue ();
+    pseudoqueue.enqueue(3);
+    pseudoqueue.enqueue(2);
+    pseudoqueue.enqueue(1);
+    expect(pseudoqueue.stack1.toString()).toEqual('{ 3 } ->{ 2 } ->{ 1 } ->Null');
+   
+  });
+
+  it('add to queue', () => {
+    const pseudoqueue = new Pqueue();
+    pseudoqueue.enqueue(3);
+    pseudoqueue.enqueue(2);
+    pseudoqueue.enqueue(1);
+
+    pseudoqueue.dequeue();
+    git  expect(pseudoqueue.stack1.toString()).toEqual("{ 2 } ->{ 1 } ->Null");
+    pseudoqueue.dequeue();
+    expect(pseudoqueue.stack1.toString()).toEqual("{ 1 } ->Null");
+
+   
+  });
 });
