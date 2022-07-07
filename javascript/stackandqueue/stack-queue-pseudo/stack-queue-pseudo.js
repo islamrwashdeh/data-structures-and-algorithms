@@ -1,29 +1,32 @@
-'user strict';
+const Stack = require('../Stack');
 
 
-
-const Stack = require('../');
-class stackQueue {
-    constructor() {
-        this.front = new Stack();
-        this.rear = new Stack();
-        this.length = 0;
+class Pqueue {
+  constructor() {
+    this.stack1 = new Stack;
+    this.stack2 = new Stack;
+  }
+  enqueue(value) {
+    if(this.stack1.isEmpty()){
+      this.stack1.push(value);
+    }else{
+      while(this.stack1.length > 0){
+        this.stack2.push(this.stack1.peek());
+        this.stack1.pop();
+      }
+      this.stack1.push(value);
+      while(this.stack2.length >0){
+        this.stack1.push(this.stack2.peek());
+        this.stack2.pop();
+      }
     }
-    enqueue(x) {
-        this.rear.push(x);
-        this.length++;
+  }
+  dequeue() {
+    if (this.stack1.isEmpty()) {
+      return 'stack is empty';
+    } else {
+      this.stack1.pop();
     }
-    dequeue() {
-        if (this.length === 0) {
-            return 'empty'
-        };
-        if (this.front.isEmpty()) {
-            while (!this.rear.isEmpty()) {
-                this.front.push(this.rear.pop());
-            }
-        }
-        this.length--;
-        return this.front.pop();
-    }
+  }
 }
-module.exports = stackQueue;
+module.exports = Pqueue;

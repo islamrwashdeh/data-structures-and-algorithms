@@ -4,6 +4,7 @@ const { BT, BST } = require('../binaryTree');
 const Node = require('../node');
 let tree = null;
 let binarySearchTree = null;
+let tree2 = null;
 
 
 describe('Binary Tree', () => {
@@ -29,6 +30,7 @@ describe('Binary Tree', () => {
     three.right = five;
 
     tree = new BT(one);
+    tree2 = new BT();
   });
 
   it('constructor', () => {
@@ -36,21 +38,47 @@ describe('Binary Tree', () => {
   });
 
   it('preOrder', () => {
-    let expectedOutput = [1, 2, 6, 7, 8, 9, 3, 4, 5];
+    let output = [1, 2, 6, 7, 8, 9, 3, 4, 5];
     let preOrder = tree.preOrder();
-    expect(preOrder).toEqual(expectedOutput);
+    expect(preOrder).toEqual(output);
   });
 
   it('inOrder', () => {
-    let expectedOutput = [6, 8, 7, 9, 2, 1, 4, 3, 5];
+    let output = [6, 8, 7, 9, 2, 1, 4, 3, 5];
     let inOrder = tree.inOrder();
-    expect(inOrder).toEqual(expectedOutput);
+    expect(inOrder).toEqual(output);
   });
 
-  it('postOrder', () => {
-    let expectedOutput = [8, 9, 7, 6, 2, 4, 5, 3, 1];
-    let postOrder = tree.postOrder();
-    expect(postOrder).toEqual(expectedOutput);
+  // it('postOrder', () => {
+  //   let output = [8, 9, 7, 6, 2, 4, 5, 3, 1];
+  //   let postOrder = tree.postOrder();
+  //   expect(postOrder).toEqual(output);
+  // });
+  // it('find max', () => {
+  //   expect(tree.findMax()).toEqual(9);
+  //   expect(tree2.findMax()).toEqual('empty');
+  //   tree2 = new BT(new Node('NaN'));
+  //   expect(tree2.findMax()).toEqual('not a number');
+
+
+  // });
+   it('breadth first', () => {
+    let node = new Node(1);
+    let tree3 = new BT(node);
+    let node2 = new Node(2);
+    node.left=node2;
+    let node3 = new Node(3);
+    node.right=node3;
+    let node4 = new Node(4);
+    node2.left=node4;
+    let node5 = new Node(5);
+    node2.right=node5;
+    let node6 = new Node(6);
+    node3.left=node6;
+    let node7 = new Node(7);
+    node3.right=node7;
+    let output = [1, 2, 3, 4, 5, 6, 7];
+    expect(tree3.breadthFirst()).toEqual(output);
   });
 
 });
