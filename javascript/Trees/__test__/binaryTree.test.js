@@ -49,19 +49,19 @@ describe('Binary Tree', () => {
     expect(inOrder).toEqual(output);
   });
 
-  // it('postOrder', () => {
-  //   let output = [8, 9, 7, 6, 2, 4, 5, 3, 1];
-  //   let postOrder = tree.postOrder();
-  //   expect(postOrder).toEqual(output);
-  // });
-  // it('find max', () => {
-  //   expect(tree.findMax()).toEqual(9);
-  //   expect(tree2.findMax()).toEqual('empty');
-  //   tree2 = new BT(new Node('NaN'));
-  //   expect(tree2.findMax()).toEqual('not a number');
+  it('postOrder', () => {
+    let output = [8, 9, 7, 6, 2, 4, 5, 3, 1];
+    let postOrder = tree.postOrder();
+    expect(postOrder).toEqual(output);
+  });
+  it('find max', () => {
+    expect(tree.findMax()).toEqual(9);
+    expect(tree2.findMax()).toEqual('empty');
+    tree2 = new BT(new Node('NaN'));
+    expect(tree2.findMax()).toEqual('not a number');
 
 
-  // });
+  });
    it('breadth first', () => {
     let node = new Node(1);
     let tree3 = new BT(node);

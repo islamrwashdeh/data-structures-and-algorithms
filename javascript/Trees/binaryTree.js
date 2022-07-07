@@ -39,7 +39,7 @@ class binaryTree {
     return this.root === null;
   }
 
-    //////////    find max     ///////////
+  
   findMax() {
     if (this.isEmpty()) return "empty";
     if(typeof this.root.value !== "number") return 'not a number';
@@ -54,7 +54,7 @@ class binaryTree {
   }
 
 
-//////// tree-breadth-first //////////
+
   breadthFirst() {
     let queue = new Queue();
     let array = [];
