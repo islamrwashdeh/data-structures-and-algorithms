@@ -38,8 +38,6 @@ class binaryTree {
   isEmpty() {
     return this.root === null;
   }
-
-  
   findMax() {
     if (this.isEmpty()) return "empty";
     if(typeof this.root.value !== "number") return 'not a number';
@@ -52,9 +50,6 @@ class binaryTree {
     }
     return max;
   }
-
-
-
   breadthFirst() {
     let queue = new Queue();
     let array = [];
