@@ -7,8 +7,7 @@ Once you are done with your article, code a working, tested implementation of In
 <!-- Embedded whiteboard image -->
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
+![pic](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/main/javascript/Insertion%20Sor/Screenshot%20(158).png?raw=true)
 big o        
 
 
