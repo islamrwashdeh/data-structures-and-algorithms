@@ -1,30 +1,13 @@
-'use strict';
-function quickSort(arr, left, right) {
-    if (left < right) {
-        let position = partition(arr, left, right);
-        quickSort(arr, left, position - 1);
-        quickSort(arr, position + 1, right);
-    }
-    return arr;
-}
-function partition(arr, left, right) {
-    let pivot = arr[right];
-    let low = left - 1;
-    for (let i = left; i < right; i++) {
-        if (arr[i] <= pivot) {
-            low++
-            swap(arr, i, low);
-        }
-    }
-    swap(arr, right, low + 1);
-    return low + 1;
-}
+# Quick Sort
 
-function swap(arr, i, low) {
-    let temp;
-    temp = arr[i];
-    arr[i] = arr[low];
-    arr[low] = temp;
-}
+## Challenge 
+ > * Provide a visual step through for each of the sample arrays based on the provided pseudo code
+* Convert the pseudo-code into working code in your language
+* Present a complete set of working tests
+## Whiteboard 
+![whiteBoard](assets/whiteboard.png)
 
-module.exports = quickSort;
+## BigO 
+
+* O(n log n) time
+* O(n log n) space
