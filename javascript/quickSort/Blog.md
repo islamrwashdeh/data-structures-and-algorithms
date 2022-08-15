@@ -45,7 +45,7 @@ QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and 
 
 ## Code Tracing
 
-![code trace](assets/quickSort.png)
+![code trace](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/main/javascript/quickSort/quickSort.png?raw=true)
 
 
 
