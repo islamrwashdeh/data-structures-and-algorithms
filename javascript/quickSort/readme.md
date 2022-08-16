@@ -5,7 +5,7 @@
 * Convert the pseudo-code into working code in your language
 * Present a complete set of working tests
 ## Whiteboard 
-![whiteBoard](assets/whiteboard.png)
+![whiteBoard](https://github.com/islamrwashdeh/data-structures-and-algorithms/blob/main/javascript/quickSort/Screenshot%20(166).png?raw=true)
 
 ## BigO 
 
