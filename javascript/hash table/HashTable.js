@@ -1,76 +1,70 @@
-"use strict";
+'use strict';
 
-const LinkedList = require("./LinkedList");
+
+const LinkedList = require('./linkedList');
+
 
 class HashTable {
-  constructor(size) {
+  constructor(size){
     this.size = size;
-    this.map = new Array(size);
+    this.buckets =new Array(size);
+    this.length = 0;
   }
-
-  hash(key) {
-    return (
-      (key.split("").reduce((acc, char) => {
-        return acc + char.charCodeAt();
-      }, 0) *
-        599) %
-      this.size
-    );
+  hash(key){
+    return key.toString().split(' ').reduce((acc, curr) => {
+      return acc + curr.charCodeAt();
+    },0)*599 % this.size;
   }
-  set(key, value) {
-    let hashIdx = this.hash(key);
-    console.log({ hashIdx });
-    if (!this.map[hashIdx]) {
-      this.map[hashIdx] = new LinkedList();
+  set(key, val){
+    const index = this.hash(key);
+    if(!this.buckets[index]){
+      this.buckets[index] = new LinkedList();
     }
-    let newData = { [key]: value };
-    this.map[hashIdx].append(newData);
+    let entryVal = {[key]:val};
+    this.buckets[index].append(entryVal);
+    this.length++;
   }
-  get(key) {
-    let index = this.hash(key);
-    if (!this.map[index]) {
+  get(key){
+    const index = this.hash(key);
+    if(!this.buckets[index]){
       return null;
     }
-    let entry = this.map[index].head;
-    do {
-      if (Object.keys(entry.value)[0] === key) {
-        return entry.value;
+    let current = this.buckets[index].head;
+    while(current){
+      if(current.value[key]){
+        return current.value[key];
       }
-      entry = entry.next;
-    } while (entry);
+      current = current.next;
+    }
     return null;
   }
-  contain(key) {
-    let index = this.hash(key);
-    if (this.map[index]) {
-      let currentEntry = this.map[index].head;
-      while (currentEntry) {
-        if (currentEntry.value[key]) {
-          return true;
-        }
-        currentEntry = currentEntry.next;
-      }
-    } else {
-      return false;
-    }
-
-    return false;
-  }
-
-  keys() {
+  keys(){
     const keys = [];
-    for (let i=0; i<this.size ;i++) {
-      if (this.map[i]) {
-        let entry = this.map[i].head;
-        while (entry) {
-          keys.push(Object.keys(entry.value)[0]);
-          entry = entry.next;
+    this.buckets.forEach(bucket => {
+      let current = bucket.head;
+      while(current){
+        for(let key in current.value){
+          keys.push(key);
         }
+        current = current.next;
       }
-    }
+    });
     return keys;
   }
+  contains(key){
+    const index = this.hash(key);
+    if(!this.buckets[index]){
+      return false;
+    }
+    let current = this.buckets[index].head;
+    while(current){
+      if(current.value[key]){
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
 }
-
 
 module.exports = HashTable;
